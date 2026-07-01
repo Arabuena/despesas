@@ -1,0 +1,43 @@
+/* ================================
+   GITIGNORE - GERADOR DE PLANILHA
+================================== */
+
+/* Dependências */
+node_modules/
+
+/* Logs */
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+/* Build / cache */
+dist/
+build/
+.cache/
+.vercel
+
+/* Sistema */
+.DS_Store
+Thumbs.db
+
+/* Editor */
+.vscode/
+.idea/
+
+/* Environment (caso use depois) */
+.env
+.env.local
+.env.*.local
+
+/* Temporary files */
+*.tmp
+*.temp
+
+/* Backup files */
+*~
+*.bak
+
+/* Optional: logs do app */
+logs/
+*.log

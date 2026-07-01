@@ -1,0 +1,65 @@
+/* ================================
+   PRINT.CSS - Otimização para impressão
+================================== */
+
+@media print {
+
+  /* Remove cores e força leitura limpa */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    margin: 0;
+  }
+
+  /* Esconde elementos desnecessários na impressão */
+  nav,
+  header,
+  footer,
+  .btn,
+  .button,
+  .ads,
+  .popup,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Ajuste geral de layout */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Tabelas mais legíveis */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  th, td {
+    border: 1px solid #000 !important;
+    padding: 6px;
+    font-size: 11pt;
+  }
+
+  th {
+    background: #f2f2f2 !important;
+  }
+
+  /* Evita quebra feia de linhas */
+  tr {
+    page-break-inside: avoid;
+  }
+
+  /* Links aparecem de forma útil na impressão */
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #333;
+  }
+
+  /* Garante que blocos não quebrem no meio */
+  section, article, .card {
+    page-break-inside: avoid;
+  }
+}

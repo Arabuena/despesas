@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerador de Planilha de Despesas</title>
+
+  <link rel="stylesheet" href="./src/css/base.css">
+<link rel="stylesheet" href="./src/css/layout.css">
+<link rel="stylesheet" href="./src/css/form.css">
+<link rel="stylesheet" href="./src/css/table.css">
+<link rel="stylesheet" href="./src/css/buttons.css">
+<link rel="stylesheet" href="./src/css/mobile.css">
+<link rel="stylesheet" href="./src/css/print.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ===================== -->
+        <!-- CABEÇALHO -->
+        <!-- ===================== -->
+
+        <header class="header">
+
+            <h1>SE SOLUÇÕES LTDA</h1>
+
+            <h2>RELATÓRIO DE DESPESAS</h2>
+
+        </header>
+
+        <!-- ===================== -->
+        <!-- DADOS DO FUNCIONÁRIO -->
+        <!-- ===================== -->
+
+        <section class="dados">
+
+            <div class="campo">
+
+                <label for="nome">Nome do Funcionário</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite o nome">
+
+            </div>
+
+            <div class="campo">
+
+                <label for="mes">Mês de Referência</label>
+
+                <input
+                    type="text"
+                    id="mes"
+                    placeholder="Ex.: Junho/2026">
+
+            </div>
+
+        </section>
+
+        <!-- ===================== -->
+        <!-- CADASTRO -->
+        <!-- ===================== -->
+
+        <section class="cadastro">
+
+            <h3>Nova Despesa</h3>
+
+            <div class="linha-form">
+
+                <input
+                    type="date"
+                    id="data">
+
+                <input
+                    type="text"
+                    id="descricao"
+                    placeholder="Descrição da despesa">
+
+                <input
+                    type="text"
+                    id="valor"
+                    placeholder="R$ 0,00">
+
+                <button
+                    type="button"
+                    id="btnAdicionar">
+
+                    Adicionar
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== -->
+        <!-- RESUMO -->
+        <!-- ===================== -->
+
+        <section class="resumo">
+
+            <div class="card">
+
+                <span>Total Geral</span>
+
+                <strong id="totalGeral">
+
+                    R$ 0,00
+
+                </strong>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== -->
+        <!-- TABELA -->
+        <!-- ===================== -->
+
+        <section class="tabela">
+
+            <table id="tabelaDespesas">
+
+                <thead>
+
+                    <tr>
+
+                        <th width="120">Data</th>
+
+                        <th>Descrição</th>
+
+                        <th width="150">Valor</th>
+
+                        <th width="120">Ações</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- ===================== -->
+        <!-- BOTÕES -->
+        <!-- ===================== -->
+
+        <footer class="acoes">
+
+            <button
+                type="button"
+                id="btnExcel">
+
+                Exportar Excel
+
+            </button>
+
+            <button
+                type="button"
+                id="btnPdf">
+
+                Exportar PDF
+
+            </button>
+
+            <button
+                type="button"
+                id="btnLimpar">
+
+                Limpar Tudo
+
+            </button>
+
+        </footer>
+
+    </div>
+
+    <!-- ================================= -->
+    <!-- BIBLIOTECAS -->
+    <!-- ================================= -->
+
+    <!-- Excel -->
+
+    <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <!-- PDF -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
+    
+
+    <!-- ================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================= -->
+
+    <script src="./src/js/utils.js"></script>
+<script src="./src/js/storage.js"></script>
+<script src="./src/js/table.js"></script>
+<script src="./src/js/form.js"></script>
+<script src="./src/js/exportExcel.js"></script>
+<script src="./src/js/exportPdf.js"></script>
+<script src="./src/js/app.js"></script>
+
+</body>
+
+</html>

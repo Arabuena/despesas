@@ -1,0 +1,172 @@
+/* =========================================================
+   TABLE.CSS
+   Estilo da tabela de despesas
+========================================================= */
+
+.tabela{
+
+    padding:0 30px 30px;
+
+    overflow-x:auto;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:var(--white);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+}
+
+/* ===============================
+   Cabeçalho
+================================ */
+
+thead{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+}
+
+thead th{
+
+    color:#fff;
+
+    padding:16px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    text-align:left;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+/* ===============================
+   Corpo
+================================ */
+
+tbody td{
+
+    padding:14px 16px;
+
+    border:1px solid #ECECEC;
+
+    font-size:14px;
+
+    color:#444;
+
+}
+
+/* Zebra */
+
+tbody tr:nth-child(even){
+
+    background:#FAFAFA;
+
+}
+
+/* Hover */
+
+tbody tr:hover{
+
+    background:#E8F5E9;
+
+    transition:.2s;
+
+}
+
+/* ===============================
+   Alinhamentos
+================================ */
+
+tbody td:nth-child(1){
+
+    text-align:center;
+
+    width:140px;
+
+}
+
+tbody td:nth-child(2){
+
+    text-align:left;
+
+}
+
+tbody td:nth-child(3){
+
+    text-align:right;
+
+    font-weight:bold;
+
+    color:var(--primary);
+
+    width:160px;
+
+}
+
+tbody td:nth-child(4){
+
+    text-align:center;
+
+    width:130px;
+
+}
+
+/* ===============================
+   Total Geral
+================================ */
+
+tfoot td{
+
+    padding:18px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    border-top:3px solid var(--primary);
+
+    background:#F3F8F4;
+
+}
+
+tfoot td:last-child{
+
+    text-align:right;
+
+    color:var(--primary);
+
+}
+
+/* ===============================
+   Linha vazia
+================================ */
+
+.semDados{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#999;
+
+    font-style:italic;
+
+}

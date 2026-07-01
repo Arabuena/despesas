@@ -1,0 +1,178 @@
+/* =========================================================
+   BUTTONS.CSS
+   Botões do Sistema
+========================================================= */
+
+/* Estilo base */
+
+button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+}
+
+/* ===========================
+   Botão Adicionar
+=========================== */
+
+#btnAdicionar{
+
+    background:var(--primary);
+
+    color:#852121;
+
+}
+
+#btnAdicionar:hover{
+
+    background:var(--primary-light);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(46,125,50,.25);
+
+}
+
+/* ===========================
+   Exportar Excel
+=========================== */
+
+#btnExcel{
+
+    background:#1D6F42;
+
+    color:#fff;
+
+}
+
+#btnExcel:hover{
+
+    background:#155A34;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   Exportar PDF
+=========================== */
+
+#btnPdf{
+
+    background:#C62828;
+
+    color:#fff;
+
+}
+
+#btnPdf:hover{
+
+    background:#A51F1F;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   Limpar Tudo
+=========================== */
+
+#btnLimpar{
+
+    background:#757575;
+
+    color:#fff;
+
+}
+
+#btnLimpar:hover{
+
+    background:#555;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   Botão Excluir Linha
+=========================== */
+
+.btnExcluir{
+
+    background:#F44336;
+
+    color:#fff;
+
+    padding:8px 12px;
+
+    font-size:13px;
+
+    border-radius:8px;
+
+}
+
+.btnExcluir:hover{
+
+    background:#D32F2F;
+
+}
+
+/* ===========================
+   Botão Editar Linha
+=========================== */
+
+.btnEditar{
+
+    background:#1976D2;
+
+    color:#fff;
+
+    padding:8px 12px;
+
+    font-size:13px;
+
+    border-radius:8px;
+
+}
+
+.btnEditar:hover{
+
+    background:#125AA0;
+
+}
+
+/* ===========================
+   Botão Desabilitado
+=========================== */
+
+button:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
