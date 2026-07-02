@@ -30,7 +30,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Limpar Tudo
     // =====================
 
-    document
+    document.getElementById("btnLimpar").addEventListener("click", () => {
+
+    const confirmar = confirm("Tem certeza que deseja apagar todas as despesas?");
+
+    if (!confirmar) return;
+
+    localStorage.removeItem("despesas");
+
+    atualizarTabela();
+
+    mostrarMensagem("Todas as despesas foram removidas com sucesso!");
+
+});
+
+
+
+   /* document
         .getElementById("btnLimpar")
         .addEventListener("click", () => {
 
@@ -44,6 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             mostrarMensagem("Todas as despesas foram removidas.");
 
-        });
+        });  */
 
 });
