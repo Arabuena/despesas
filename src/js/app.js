@@ -44,7 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js");
+}
 
    /* document
         .getElementById("btnLimpar")
